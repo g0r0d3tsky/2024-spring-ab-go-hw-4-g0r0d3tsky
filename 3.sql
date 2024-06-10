@@ -3,9 +3,9 @@ CREATE TABLE IF NOT EXISTS payments_for_parents
     id       String,
     date     Date,
     category String,
-    purpose  String,
-    money    Int32,
-    `index` Int32
+    purpose Nullable(String),
+    money Decimal(18, 2),
+    `index` Int64
 ) ENGINE = SummingMergeTree()
 ORDER BY (date, category, id);
 
