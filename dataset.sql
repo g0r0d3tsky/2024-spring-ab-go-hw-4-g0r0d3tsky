@@ -1,4 +1,4 @@
-CREATE TABLE source (
+CREATE TABLE IF NOT EXISTS source(
                         value String
 ) ENGINE Memory;
 INSERT INTO source (value) VALUES ('{"category":"gaming","type":"payment","index":6,"id":"recipe2","money":563,"date":"2021-01-01","purpose":"рубились в доту в компьютерном клубе"}');
